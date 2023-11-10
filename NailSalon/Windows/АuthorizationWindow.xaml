@@ -1,0 +1,52 @@
+﻿<Window x:Class="NailSalon.Windows.АuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NailSalon.Windows"
+        mc:Ignorable="d"
+        Title="АuthorizationWindow" Height="450" Width="800"
+        WindowState="Maximized">
+    <Grid Background="#8E8E8E">
+        
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="10">
+            
+            <Label Content="Войти"
+                   FontSize="40"
+                   Style="{StaticResource lbStyle}"/>
+
+            <TextBox x:Name="tbLogin"
+                 Width="326"
+                 Height="48"
+                 Margin="10"
+                 Style="{StaticResource tbStyle}"/>
+
+            <PasswordBox x:Name="pbPassword"
+                   Width="326"
+                   Height="48"
+                   Margin="10"
+                   PasswordChar="*"
+                   Style="{StaticResource pbStyle}"/>
+
+            <Button x:Name="btnLogIn"
+                Width="326"
+                Height="48"
+                Margin="0 30 0 0"
+                Content="Подтвердить" 
+                Style="{StaticResource btnStyle}"
+                Click="btnLogIn_Click"/>
+
+            <TextBlock x:Name="btnRegOn"
+                   Width="285"
+                   Height="48"
+                   Margin="10"
+                   FontSize="16"
+                   Style="{StaticResource tblStyle}"
+                   Text="Нет аккаунта? Создайте прямо сейчас!" 
+                   MouseLeftButtonUp="btnRegOn_MouseLeftButtonUp"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

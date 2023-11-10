@@ -1,0 +1,81 @@
+﻿<Window x:Class="NailSalon.Windows.ServiceAddEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NailSalon.Windows"
+        mc:Ignorable="d"
+        Title="ServiceAddEditWindow" Height="450" Width="800"
+        WindowState="Maximized">
+    <Grid Background="#8E8E8E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="320*"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="tblHeader"
+               Text="Добавление/изменение услуги"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               FontWeight="Medium"
+               FontSize="40"
+               Margin="30 0 0 0"
+               Style="{StaticResource tblStyle}"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="1">
+
+            <TextBox x:Name="tbTitle"
+                 Style="{StaticResource tbStyle}"
+                 Width="400"
+                 Height="48"
+                 Margin="10"/>
+
+            <ComboBox x:Name="cmbCategory"
+                  Style="{StaticResource cmbStyle}"
+                  Width="400"
+                  Height="48"
+                  Margin="10"/>
+
+            <TextBox x:Name="tbDescription"
+                 Style="{StaticResource tbStyle}"
+                 Width="400"
+                 Height="48"
+                 Margin="10"/>
+
+            <TextBox x:Name="tbCost"
+                 Style="{StaticResource tbStyle}"
+                 Width="400"
+                 Height="48"
+                 Margin="10"/>
+
+            <TextBox x:Name="tbDurationInMinute"
+                 Style="{StaticResource tbStyle}"
+                 Width="400"
+                 Height="48"
+                 Margin="10"/>
+
+        </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Center"
+                Orientation="Horizontal"
+                Grid.Row="2">
+
+            <Button x:Name="btnAddEdit"
+                Width="200"
+                Height="48"  
+                Content="Сохранить" 
+                Style="{StaticResource btnStyle}"
+                Click="btnAddEdit_Click"/>
+
+            <Button x:Name="btnBack"
+                Width="200"
+                Height="48"
+                Content="Отменить" 
+                Style="{StaticResource btnStyle}" Click="btnBack_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

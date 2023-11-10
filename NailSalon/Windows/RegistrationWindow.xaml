@@ -1,0 +1,123 @@
+﻿<Window x:Class="NailSalon.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NailSalon.Windows"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Height="530" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#8E8E8E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="179*"/>
+            <RowDefinition Height="38*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Регистрация"
+               FontSize="40"
+               Style="{StaticResource lbStyle}"
+               Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="266,0,0,0" Grid.RowSpan="2"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Grid.Row="0" Margin="0,79,0,0">
+
+            <TextBlock Text="Введите фамилию"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource tblStyle}"/>
+
+            <TextBox x:Name="tbLastName"
+                 Style="{StaticResource tbStyle}"/>
+
+            <TextBlock Text="Введите имя"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource tblStyle}"/>
+
+            <TextBox x:Name="tbFirstName"
+                 Style="{StaticResource tbStyle}"/>
+
+            <TextBlock Text="Введите отчество"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource tblStyle}"/>
+
+            <TextBox x:Name="tbPatronymic"
+                 Style="{StaticResource tbStyle}"/>
+
+            <TextBlock Text="Введите дату рождения"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource tblStyle}"/>
+
+            <DatePicker  x:Name="DpBirthDay"
+                     FontSize="14"
+                     Height="35"
+                     Width="300"
+                     HorizontalAlignment="Center"/>
+
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Grid.Column="1" Margin="0,81,0,0">
+
+            <TextBlock Text="Выберите пол"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource tblStyle}"/>
+
+            <WrapPanel>
+                <RadioButton x:Name="rbMale"
+                             GroupName="Gender" 
+                             Content="Мужской"
+                             Style="{StaticResource rbStyle}"/>
+
+                <RadioButton x:Name="rbFemale"
+                             GroupName="Gender" 
+                             Content="Женский"
+                             Style="{StaticResource rbStyle}"/>
+            </WrapPanel>
+
+            <TextBlock Text="Введите номер телефона"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource tblStyle}"/>
+
+            <TextBox   x:Name="tbPhone"
+                   Style="{StaticResource tbStyle}"/>
+
+            <TextBlock Text="Введите логин"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource tblStyle}"/>
+
+            <TextBox   x:Name="tbLogin"
+                   Style="{StaticResource tbStyle}"/>
+
+            <TextBlock Text="Введите пароль"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource tblStyle}"/>
+
+            <PasswordBox   x:Name="tbPassword"
+                   Style="{StaticResource pbStyle}"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.ColumnSpan="2"
+                HorizontalAlignment="Left" Margin="222,405,0,-47" Grid.RowSpan="2">
+
+            <Button x:Name="btnEnter"
+                Style="{StaticResource btnStyle}"
+                Content="Зарегестрироваться"
+                Width="170"
+                Click="btnEnter_Click"/>
+
+            <TextBlock x:Name="tbSignIn"
+               Text="Уже есть аккаунт? Войдите прямо сейчас"
+               Style="{StaticResource tblStyle}"
+               MouseLeftButtonUp ="tbSignIn_MouseLeftButtonUp" />
+        </StackPanel>
+
+    </Grid>
+</Window>

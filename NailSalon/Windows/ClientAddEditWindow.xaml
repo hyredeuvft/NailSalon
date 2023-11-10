@@ -1,0 +1,97 @@
+﻿<Window x:Class="NailSalon.Windows.ClientAddEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NailSalon.Windows"
+        mc:Ignorable="d"
+        Title="ClientAddEditWindow" Height="450" Width="800"
+            WindowState="Maximized">
+    <Grid Background="#8E8E8E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="320*"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="tblHeader"
+               Text="Добавление/изменение клиента"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               FontWeight="Medium"
+               FontSize="40"
+               Margin="30 0 0 0"
+               Style="{StaticResource tblStyle}"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="1">
+
+            <TextBox x:Name="tbLastName"
+                 Style="{StaticResource tbStyle}"
+                 Width="400"
+                 Height="48"
+                 Margin="10"/>
+
+            <TextBox x:Name="tbFirstName"
+                 Style="{StaticResource tbStyle}"
+                 Width="400"
+                 Height="48"
+                 Margin="10"/>
+
+            <TextBox x:Name="tbPatronymic"
+                 Style="{StaticResource tbStyle}"
+                 Width="400"
+                 Height="48"
+                 Margin="10"/>
+
+            <DatePicker x:Name="dpBirthday"
+                    Width="400"
+                    Height="30"
+                    Margin="10">
+            </DatePicker>
+
+            <DatePicker x:Name="dpRegistrationDate"
+                    Width="400"
+                    Height="30"
+                    Margin="10">
+            </DatePicker>
+
+            <ComboBox x:Name="cmbGender"
+                  Width="400"
+                  Height="48"
+                  Margin="10">
+                <ComboBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </ComboBox.Resources>
+            </ComboBox>
+
+            <TextBox x:Name="tbPhone"
+                 Style="{StaticResource tbStyle}"
+                 Width="400"
+                 Height="48"
+                 Margin="10"/>
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center"
+                Orientation="Horizontal"
+                Grid.Row="2">
+
+            <Button x:Name="btnAddEdit"
+                Width="200"
+                Height="48"  
+                Content="Сохранить" 
+                Style="{StaticResource btnStyle}" 
+                Click="btnAddEdit_Click"/>
+
+            <Button x:Name="btnBack"
+                Width="200"
+                Height="48"
+                Content="Отменить" 
+                Style="{StaticResource btnStyle}" Click="btnBack_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

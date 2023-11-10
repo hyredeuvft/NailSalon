@@ -1,0 +1,75 @@
+﻿<Window x:Class="NailSalon.Windows.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NailSalon.Windows"
+        mc:Ignorable="d"
+        Title="HomeWindow" Height="650" Width="400"
+        WindowStartupLocation="CenterScreen"
+            WindowState="Maximized">
+    <Grid Background="#8E8E8E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="tblWelcome"
+               FontSize="40"
+               Style="{StaticResource tblStyle}"
+                   Text="111"
+            />
+
+        <WrapPanel HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Orientation="Vertical"
+                   Grid.Row="1">
+
+            <Button x:Name="btnListService"
+                Width="190"
+                Height="50"
+                Margin="10"
+                Content="Список услуг" 
+                Style="{StaticResource btnStyle}" Click="btnListService_Click"/>
+
+            <Button x:Name="btnListClient"
+                Width="190"
+                Height="50"
+                Content="Список клиентов" 
+                Style="{StaticResource btnStyle}"
+                Click="btnListClient_Click"/>
+
+            <Button x:Name="btnListEmployee"
+                Width="190"
+                Height="50"
+                Margin="10"
+                Content="Список сотрудников" 
+                Style="{StaticResource btnStyle}"
+                Click="btnListEmployee_Click"/>
+
+            <Button x:Name="btnListRecord"
+                Width="190"
+                Height="50"
+                Margin="10"
+                Style="{StaticResource btnStyle}"
+                Content="Список записей" 
+                Click="btnListRecord_Click"/>
+
+            <Button x:Name="btnListProduct"
+                Width="190"
+                Height="50"
+                Margin="10"
+                Content="Список товаров"
+                Style="{StaticResource btnStyle}"
+                Click="btnListProduct_Click"/>
+
+            <Button x:Name="btnExit"
+                Width="190"
+                Height="50"
+                Margin="10"
+                Style="{StaticResource btnStyle}"
+                Content="Выход" 
+                Click="btnExit_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>
